@@ -1,0 +1,167 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mips
+Version: N-2017.09-SP3
+Date   : Sat Jan  8 15:52:46 2022
+****************************************
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: cont_statelog_state_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp_pcreg_q_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mips               4000                  tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cont_statelog_state_reg_3_/CP (dfnrq1)                  0.00       0.00 r
+  cont_statelog_state_reg_3_/Q (dfnrq1)                   0.38       0.38 f
+  U473/ZN (inv0d0)                                        0.84       1.22 r
+  U498/ZN (nd03d1)                                        0.17       1.38 f
+  U438/ZN (nr02d0)                                        1.14       2.52 r
+  U499/ZN (nr03d1)                                        0.30       2.82 f
+  U439/ZN (inv0d0)                                        1.14       3.96 r
+  U500/ZN (aoi22d1)                                       0.26       4.21 f
+  intadd_0_U8/CO (ad01d0)                                 0.38       4.59 f
+  intadd_0_U7/CO (ad01d0)                                 0.29       4.88 f
+  intadd_0_U6/CO (ad01d0)                                 0.29       5.17 f
+  intadd_0_U5/CO (ad01d0)                                 0.29       5.45 f
+  intadd_0_U4/CO (ad01d0)                                 0.29       5.74 f
+  intadd_0_U3/CO (ad01d0)                                 0.29       6.02 f
+  intadd_0_U2/CO (ad01d0)                                 0.28       6.30 f
+  U510/ZN (nd03d1)                                        0.11       6.41 r
+  U511/ZN (aon211d1)                                      0.12       6.53 f
+  U512/Z (mx02d1)                                         0.25       6.77 r
+  U515/ZN (oaim21d1)                                      0.12       6.90 r
+  U520/ZN (oai211d1)                                      0.10       7.00 f
+  U362/ZN (nr04d0)                                        0.37       7.37 r
+  U716/ZN (aoi31d1)                                       0.11       7.48 f
+  U364/ZN (nr02d0)                                        0.23       7.72 r
+  U370/ZN (inv0d0)                                        0.32       8.04 f
+  U735/ZN (oai22d1)                                       0.17       8.21 r
+  dp_pcreg_q_reg_3_/D (dfnrq1)                            0.00       8.21 r
+  data arrival time                                                  8.21
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  dp_pcreg_q_reg_3_/CP (dfnrq1)                           0.00      10.00 r
+  library setup time                                     -0.11       9.89
+  data required time                                                 9.89
+  --------------------------------------------------------------------------
+  data required time                                                 9.89
+  data arrival time                                                 -8.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.69
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : mips
+Version: N-2017.09-SP3
+Date   : Sat Jan  8 15:52:46 2022
+****************************************
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: dp_rf_RAM_reg_5__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp_rf_RAM_reg_5__1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mips               4000                  tsl18fs120_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp_rf_RAM_reg_5__1_/CP (dfnrq1)          0.00       0.00 r
+  dp_rf_RAM_reg_5__1_/Q (dfnrq1)           0.28       0.28 r
+  U423/Z (aoim22d2)                        0.11       0.40 r
+  dp_rf_RAM_reg_5__1_/D (dfnrq1)           0.00       0.40 r
+  data arrival time                                   0.40
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp_rf_RAM_reg_5__1_/CP (dfnrq1)          0.00       0.00 r
+  library hold time                       -0.04      -0.04
+  data required time                                 -0.04
+  -----------------------------------------------------------
+  data required time                                 -0.04
+  data arrival time                                  -0.40
+  -----------------------------------------------------------
+  slack (MET)                                         0.43
+
+
+1
+ 
+****************************************
+Report : area
+Design : mips
+Version: N-2017.09-SP3
+Date   : Sat Jan  8 15:52:46 2022
+****************************************
+
+Library(s) Used:
+
+    tsl18fs120_typ (File: /tools/kits/tower2/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db)
+
+Number of ports:                           28
+Number of nets:                           535
+Number of cells:                          511
+Number of combinational cells:            388
+Number of sequential cells:               123
+Number of macros/black boxes:               0
+Number of buf/inv:                         69
+Number of references:                      38
+
+Combinational area:                558.750000
+Buf/Inv area:                       36.250000
+Noncombinational area:             590.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:             333.330441
+
+Total cell area:                  1148.750000
+Total area:                       1482.080441
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : mips
+Version: N-2017.09-SP3
+Date   : Sat Jan  8 15:52:46 2022
+****************************************
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   mips                         0.00       29996.24       -29996.24 (VIOLATED)
+
+
+1

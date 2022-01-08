@@ -1,0 +1,89 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : mips
+Version: N-2017.09-SP3
+Date   : Fri Jan  7 00:12:40 2022
+****************************************
+
+
+Library(s) Used:
+
+    tsl18fs120_typ (File: /tools/kits/tower2/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db)
+
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+mips                   4000              tsl18fs120_typ
+controller             4000              tsl18fs120_typ
+datapath_WIDTH8_REGBITS3
+                       4000              tsl18fs120_typ
+statelogic             ForQA             tsl18fs120_typ
+outputlogic            ForQA             tsl18fs120_typ
+aludec                 ForQA             tsl18fs120_typ
+mux2_WIDTH3            ForQA             tsl18fs120_typ
+flopen_WIDTH8_0        ForQA             tsl18fs120_typ
+flopenr_WIDTH8         ForQA             tsl18fs120_typ
+flop_WIDTH8_0          ForQA             tsl18fs120_typ
+mux2_WIDTH8_0          ForQA             tsl18fs120_typ
+mux4_WIDTH8            ForQA             tsl18fs120_typ
+mux3_WIDTH8            ForQA             tsl18fs120_typ
+regfile_WIDTH8_REGBITS3
+                       4000              tsl18fs120_typ
+alu_WIDTH8             4000              tsl18fs120_typ
+andN                   ForQA             tsl18fs120_typ
+orN                    ForQA             tsl18fs120_typ
+condinv                ForQA             tsl18fs120_typ
+adder                  ForQA             tsl18fs120_typ
+mux4                   ForQA             tsl18fs120_typ
+zerodetect_WIDTH8      ForQA             tsl18fs120_typ
+inv                    ForQA             tsl18fs120_typ
+mux2                   ForQA             tsl18fs120_typ
+flopen_WIDTH8_1        ForQA             tsl18fs120_typ
+flopen_WIDTH8_2        ForQA             tsl18fs120_typ
+flopen_WIDTH8_3        ForQA             tsl18fs120_typ
+flop_WIDTH8_1          ForQA             tsl18fs120_typ
+flop_WIDTH8_2          ForQA             tsl18fs120_typ
+flop_WIDTH8_3          ForQA             tsl18fs120_typ
+mux2_WIDTH8_1          ForQA             tsl18fs120_typ
+mux2_WIDTH8_2          ForQA             tsl18fs120_typ
+adder_DW01_add_1       ForQA             tsl18fs120_typ
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   5.8134 mW   (90%)
+  Net Switching Power  = 618.3940 uW   (10%)
+                         ---------
+Total Dynamic Power    =   6.4318 mW  (100%)
+
+Cell Leakage Power     =  42.3515 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           5.5409        7.2240e-02        2.3796e+04            5.6132  (  87.27%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.2725            0.5462        1.8556e+04            0.8187  (  12.73%)
+--------------------------------------------------------------------------------------------------
+Total              5.8134 mW         0.6184 mW     4.2351e+04 pW         6.4318 mW
+1

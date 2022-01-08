@@ -1,0 +1,377 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mips
+Version: N-2017.09-SP3
+Date   : Fri Jan  7 00:12:40 2022
+****************************************
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: cont/statelog/state_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/pcreg/q_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mips               4000                  tsl18fs120_typ
+  controller         4000                  tsl18fs120_typ
+  outputlogic        ForQA                 tsl18fs120_typ
+  mux4_WIDTH8        ForQA                 tsl18fs120_typ
+  datapath_WIDTH8_REGBITS3
+                     4000                  tsl18fs120_typ
+  condinv            ForQA                 tsl18fs120_typ
+  mux2               ForQA                 tsl18fs120_typ
+  alu_WIDTH8         4000                  tsl18fs120_typ
+  adder_DW01_add_1   ForQA                 tsl18fs120_typ
+  zerodetect_WIDTH8  ForQA                 tsl18fs120_typ
+  flopenr_WIDTH8     ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cont/statelog/state_reg_0_/CP (dfnrq4)                  0.00       0.00 r
+  cont/statelog/state_reg_0_/Q (dfnrq4)                   0.29       0.29 f
+  cont/statelog/state[0] (statelogic)                     0.00       0.29 f
+  cont/outputlog/state[0] (outputlogic)                   0.00       0.29 f
+  cont/outputlog/U7/ZN (invbd4)                           0.04       0.33 r
+  cont/outputlog/U24/ZN (nd03d2)                          0.06       0.40 f
+  cont/outputlog/U23/ZN (oaim21d1)                        0.12       0.51 r
+  cont/outputlog/alusrcb[0] (outputlogic)                 0.00       0.51 r
+  cont/alusrcb[0] (controller)                            0.00       0.51 r
+  dp/alusrcb[0] (datapath_WIDTH8_REGBITS3)                0.00       0.51 r
+  dp/src2mux/s[0] (mux4_WIDTH8)                           0.00       0.51 r
+  dp/src2mux/U13/ZN (inv0d2)                              0.06       0.58 f
+  dp/src2mux/U14/ZN (nd02d2)                              0.09       0.67 r
+  dp/src2mux/U7/ZN (inv0d4)                               0.05       0.72 f
+  dp/src2mux/U30/ZN (nd02d2)                              0.05       0.77 r
+  dp/src2mux/U23/ZN (nd04d1)                              0.15       0.92 f
+  dp/src2mux/y[0] (mux4_WIDTH8)                           0.00       0.92 f
+  dp/alunit/b[0] (alu_WIDTH8)                             0.00       0.92 f
+  dp/alunit/binv/a[0] (condinv)                           0.00       0.92 f
+  dp/alunit/binv/inverter/a[0] (inv)                      0.00       0.92 f
+  dp/alunit/binv/inverter/U1/ZN (inv0d2)                  0.07       0.99 r
+  dp/alunit/binv/inverter/y[0] (inv)                      0.00       0.99 r
+  dp/alunit/binv/invmux/d1[0] (mux2)                      0.00       0.99 r
+  dp/alunit/binv/invmux/U8/Z (an02d1)                     0.10       1.09 r
+  dp/alunit/binv/invmux/U10/ZN (nd12d2)                   0.11       1.19 r
+  dp/alunit/binv/invmux/y[0] (mux2)                       0.00       1.19 r
+  dp/alunit/binv/y[0] (condinv)                           0.00       1.19 r
+  dp/alunit/addblock/b[0] (adder)                         0.00       1.19 r
+  dp/alunit/addblock/add_1_root_add_458_2/B[0] (adder_DW01_add_1)
+                                                          0.00       1.19 r
+  dp/alunit/addblock/add_1_root_add_458_2/U90/ZN (inv0d2)
+                                                          0.03       1.22 f
+  dp/alunit/addblock/add_1_root_add_458_2/U108/ZN (oai21d1)
+                                                          0.14       1.37 r
+  dp/alunit/addblock/add_1_root_add_458_2/U105/ZN (aoi21d2)
+                                                          0.21       1.58 f
+  dp/alunit/addblock/add_1_root_add_458_2/U87/Z (ora21d1)
+                                                          0.18       1.75 f
+  dp/alunit/addblock/add_1_root_add_458_2/U95/ZN (xn02d1)
+                                                          0.17       1.93 f
+  dp/alunit/addblock/add_1_root_add_458_2/SUM[7] (adder_DW01_add_1)
+                                                          0.00       1.93 f
+  dp/alunit/addblock/y[7] (adder)                         0.00       1.93 f
+  dp/alunit/resultmux/d2[7] (mux4)                        0.00       1.93 f
+  dp/alunit/resultmux/U26/ZN (oaim21d1)                   0.14       2.07 f
+  dp/alunit/resultmux/y[7] (mux4)                         0.00       2.07 f
+  dp/alunit/zd/a[7] (zerodetect_WIDTH8)                   0.00       2.07 f
+  dp/alunit/zd/U3/ZN (nr02d2)                             0.09       2.16 r
+  dp/alunit/zd/U1/Z (an04d1)                              0.16       2.31 r
+  dp/alunit/zd/y (zerodetect_WIDTH8)                      0.00       2.31 r
+  dp/alunit/zero (alu_WIDTH8)                             0.00       2.31 r
+  dp/zero (datapath_WIDTH8_REGBITS3)                      0.00       2.31 r
+  cont/zero (controller)                                  0.00       2.31 r
+  cont/U3/ZN (nr02d2)                                     0.04       2.35 f
+  cont/U2/ZN (nr02d2)                                     0.11       2.46 r
+  cont/pcen (controller)                                  0.00       2.46 r
+  dp/pcen (datapath_WIDTH8_REGBITS3)                      0.00       2.46 r
+  dp/pcreg/en (flopenr_WIDTH8)                            0.00       2.46 r
+  dp/pcreg/U17/ZN (nd12d2)                                0.09       2.55 f
+  dp/pcreg/U16/ZN (invbd4)                                0.08       2.63 r
+  dp/pcreg/U39/ZN (oaim21d1)                              0.13       2.76 r
+  dp/pcreg/q_reg_7_/D (dfnrn4)                            0.00       2.76 r
+  data arrival time                                                  2.76
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  dp/pcreg/q_reg_7_/CP (dfnrn4)                           0.00       2.00 r
+  library setup time                                     -0.08       1.92
+  data required time                                                 1.92
+  --------------------------------------------------------------------------
+  data required time                                                 1.92
+  data arrival time                                                 -2.76
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.85
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : mips
+Version: N-2017.09-SP3
+Date   : Fri Jan  7 00:12:40 2022
+****************************************
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: dp/pcreg/q_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/pcreg/q_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mips               4000                  tsl18fs120_typ
+  flopenr_WIDTH8     ForQA                 tsl18fs120_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/pcreg/q_reg_5_/CP (dfnrn4)            0.00       0.00 r
+  dp/pcreg/q_reg_5_/QN (dfnrn4)            0.25       0.25 r
+  dp/pcreg/U13/ZN (nd13d2)                 0.11       0.36 r
+  dp/pcreg/U19/ZN (oaim21d1)               0.05       0.41 f
+  dp/pcreg/q_reg_5_/D (dfnrn4)             0.00       0.41 f
+  data arrival time                                   0.41
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/pcreg/q_reg_5_/CP (dfnrn4)            0.00       0.00 r
+  library hold time                       -0.02      -0.02
+  data required time                                 -0.02
+  -----------------------------------------------------------
+  data required time                                 -0.02
+  data arrival time                                  -0.41
+  -----------------------------------------------------------
+  slack (MET)                                         0.42
+
+
+1
+ 
+****************************************
+Report : area
+Design : mips
+Version: N-2017.09-SP3
+Date   : Fri Jan  7 00:12:40 2022
+****************************************
+
+Library(s) Used:
+
+    tsl18fs120_typ (File: /tools/kits/tower2/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db)
+
+Number of ports:                          755
+Number of nets:                          1448
+Number of cells:                          752
+Number of combinational cells:            571
+Number of sequential cells:               150
+Number of macros/black boxes:               0
+Number of buf/inv:                        167
+Number of references:                       2
+
+Combinational area:                765.500000
+Buf/Inv area:                      142.750000
+Noncombinational area:             901.250000
+Macro/Black Box area:                0.000000
+Net Interconnect area:             438.065794
+
+Total cell area:                  1666.750000
+Total area:                       2104.815794
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : mips
+Version: N-2017.09-SP3
+Date   : Fri Jan  7 00:12:40 2022
+****************************************
+
+
+   max_delay/setup ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   dp/pcreg/q_reg_7_/D          1.92           2.76 r        -0.85  (VIOLATED)
+   dp/pcreg/q_reg_4_/D          1.92           2.76 r        -0.84  (VIOLATED)
+   dp/pcreg/q_reg_6_/D          1.92           2.76 r        -0.84  (VIOLATED)
+   dp/pcreg/q_reg_0_/D          1.92           2.76 r        -0.84  (VIOLATED)
+   dp/pcreg/q_reg_1_/D          1.92           2.76 r        -0.84  (VIOLATED)
+   dp/pcreg/q_reg_2_/D          1.92           2.76 r        -0.84  (VIOLATED)
+   dp/pcreg/q_reg_3_/D          1.92           2.76 r        -0.84  (VIOLATED)
+   dp/pcreg/q_reg_5_/D          1.92           2.76 r        -0.84  (VIOLATED)
+   dp/resreg/q_reg_7_/D         1.89           2.39 r        -0.50  (VIOLATED)
+   dp/rf/RAM_reg_0__1_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_0__2_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_0__3_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_0__4_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_0__5_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_0__6_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_0__7_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_1__1_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_1__2_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_1__3_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_1__4_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_1__5_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_1__6_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_1__7_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_2__1_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_2__2_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_2__3_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_2__4_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_2__5_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_2__6_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_2__7_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_3__1_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_3__2_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_3__3_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_3__4_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_3__5_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_3__6_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_3__7_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_4__1_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_4__2_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_4__3_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_4__4_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_4__5_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_4__6_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_4__7_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_5__1_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_5__2_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_5__3_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_5__4_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_5__5_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_5__6_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_5__7_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_6__1_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_6__2_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_6__3_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_6__4_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_6__5_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_6__6_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_6__7_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_7__1_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_7__2_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_7__3_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_7__4_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_7__5_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_7__6_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_7__7_/D        1.84           2.26 r        -0.42  (VIOLATED)
+   dp/rf/RAM_reg_1__0_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_1__1_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_1__2_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_1__3_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_1__4_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_1__5_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_1__6_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_1__7_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_2__0_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_2__1_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_2__2_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_2__3_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_2__4_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_2__5_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_2__6_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_2__7_/ENN      1.65           2.05 f        -0.40  (VIOLATED)
+   dp/rf/RAM_reg_3__0_/ENN      1.65           2.04 f        -0.39  (VIOLATED)
+   dp/rf/RAM_reg_3__1_/ENN      1.65           2.04 f        -0.39  (VIOLATED)
+   dp/rf/RAM_reg_3__2_/ENN      1.65           2.04 f        -0.39  (VIOLATED)
+   dp/rf/RAM_reg_3__3_/ENN      1.65           2.04 f        -0.39  (VIOLATED)
+   dp/rf/RAM_reg_3__4_/ENN      1.65           2.04 f        -0.39  (VIOLATED)
+   dp/rf/RAM_reg_3__5_/ENN      1.65           2.04 f        -0.39  (VIOLATED)
+   dp/rf/RAM_reg_3__6_/ENN      1.65           2.04 f        -0.39  (VIOLATED)
+   dp/rf/RAM_reg_3__7_/ENN      1.65           2.04 f        -0.39  (VIOLATED)
+   dp/rf/RAM_reg_0__0_/ENN      1.65           2.03 f        -0.37  (VIOLATED)
+   dp/rf/RAM_reg_0__1_/ENN      1.65           2.03 f        -0.37  (VIOLATED)
+   dp/rf/RAM_reg_0__2_/ENN      1.65           2.03 f        -0.37  (VIOLATED)
+   dp/rf/RAM_reg_0__3_/ENN      1.65           2.03 f        -0.37  (VIOLATED)
+   dp/rf/RAM_reg_0__4_/ENN      1.65           2.03 f        -0.37  (VIOLATED)
+   dp/rf/RAM_reg_0__5_/ENN      1.65           2.03 f        -0.37  (VIOLATED)
+   dp/rf/RAM_reg_0__6_/ENN      1.65           2.03 f        -0.37  (VIOLATED)
+   dp/rf/RAM_reg_0__7_/ENN      1.65           2.03 f        -0.37  (VIOLATED)
+   dp/resreg/q_reg_4_/D         1.92           2.28 r        -0.35  (VIOLATED)
+   dp/resreg/q_reg_0_/D         1.92           2.25 r        -0.33  (VIOLATED)
+   dp/resreg/q_reg_5_/D         1.89           2.23 f        -0.33  (VIOLATED)
+   dp/resreg/q_reg_6_/D         1.92           2.25 r        -0.33  (VIOLATED)
+   dp/rf/RAM_reg_6__0_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_6__1_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_6__2_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_6__3_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_6__4_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_6__5_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_6__6_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_6__7_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_4__0_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_4__1_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_4__2_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_4__3_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_4__4_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_4__5_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_4__6_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_4__7_/ENN      1.65           1.93 f        -0.28  (VIOLATED)
+   dp/rf/RAM_reg_5__0_/ENN      1.65           1.93 f        -0.27  (VIOLATED)
+   dp/rf/RAM_reg_5__1_/ENN      1.65           1.93 f        -0.27  (VIOLATED)
+   dp/rf/RAM_reg_5__2_/ENN      1.65           1.93 f        -0.27  (VIOLATED)
+   dp/rf/RAM_reg_5__3_/ENN      1.65           1.93 f        -0.27  (VIOLATED)
+   dp/rf/RAM_reg_5__4_/ENN      1.65           1.93 f        -0.27  (VIOLATED)
+   dp/rf/RAM_reg_5__5_/ENN      1.65           1.93 f        -0.27  (VIOLATED)
+   dp/rf/RAM_reg_5__6_/ENN      1.65           1.93 f        -0.27  (VIOLATED)
+   dp/rf/RAM_reg_5__7_/ENN      1.65           1.93 f        -0.27  (VIOLATED)
+   adr[4]                       1.50           1.73 f        -0.23  (VIOLATED)
+   adr[5]                       1.50           1.73 f        -0.23  (VIOLATED)
+   adr[6]                       1.50           1.73 f        -0.23  (VIOLATED)
+   adr[7]                       1.50           1.73 f        -0.23  (VIOLATED)
+   dp/rf/RAM_reg_7__0_/ENN      1.77           2.00 r        -0.22  (VIOLATED)
+   dp/rf/RAM_reg_7__1_/ENN      1.77           2.00 r        -0.22  (VIOLATED)
+   dp/rf/RAM_reg_7__2_/ENN      1.77           2.00 r        -0.22  (VIOLATED)
+   dp/rf/RAM_reg_7__3_/ENN      1.77           2.00 r        -0.22  (VIOLATED)
+   dp/rf/RAM_reg_7__4_/ENN      1.77           2.00 r        -0.22  (VIOLATED)
+   dp/rf/RAM_reg_7__5_/ENN      1.77           2.00 r        -0.22  (VIOLATED)
+   dp/rf/RAM_reg_7__6_/ENN      1.77           2.00 r        -0.22  (VIOLATED)
+   dp/rf/RAM_reg_7__7_/ENN      1.77           2.00 r        -0.22  (VIOLATED)
+   dp/ir1/q_reg_0_/ENN          1.77           1.96 r        -0.19  (VIOLATED)
+   dp/ir1/q_reg_1_/ENN          1.77           1.96 r        -0.19  (VIOLATED)
+   dp/ir1/q_reg_2_/ENN          1.77           1.96 r        -0.19  (VIOLATED)
+   dp/ir1/q_reg_3_/ENN          1.77           1.96 r        -0.19  (VIOLATED)
+   dp/ir1/q_reg_4_/ENN          1.77           1.96 r        -0.19  (VIOLATED)
+   dp/ir1/q_reg_5_/ENN          1.77           1.96 r        -0.19  (VIOLATED)
+   dp/ir1/q_reg_6_/ENN          1.77           1.96 r        -0.19  (VIOLATED)
+   dp/ir1/q_reg_7_/ENN          1.77           1.96 r        -0.19  (VIOLATED)
+   dp/resreg/q_reg_2_/D         1.92           2.10 r        -0.19  (VIOLATED)
+   dp/resreg/q_reg_3_/D         1.87           2.02 f        -0.15  (VIOLATED)
+   adr[0]                       1.50           1.62 f        -0.12  (VIOLATED)
+   adr[1]                       1.50           1.62 f        -0.12  (VIOLATED)
+   adr[2]                       1.50           1.62 f        -0.12  (VIOLATED)
+   adr[3]                       1.50           1.62 f        -0.12  (VIOLATED)
+   dp/resreg/q_reg_1_/D         1.87           1.94 f        -0.07  (VIOLATED)
+   dp/ir2/q_reg_0_/ENN          1.77           1.84 r        -0.07  (VIOLATED)
+   dp/ir2/q_reg_1_/ENN          1.77           1.84 r        -0.07  (VIOLATED)
+   dp/ir2/q_reg_2_/ENN          1.77           1.84 r        -0.07  (VIOLATED)
+   dp/ir2/q_reg_3_/ENN          1.77           1.84 r        -0.07  (VIOLATED)
+   dp/ir2/q_reg_4_/ENN          1.77           1.84 r        -0.07  (VIOLATED)
+   dp/ir2/q_reg_5_/ENN          1.77           1.84 r        -0.07  (VIOLATED)
+   dp/ir2/q_reg_6_/ENN          1.77           1.84 r        -0.07  (VIOLATED)
+   dp/ir2/q_reg_7_/ENN          1.77           1.84 r        -0.07  (VIOLATED)
+   cont/statelog/state_reg_2_/D
+                                1.90           1.90 r         0.00  (VIOLATED: increase significant digits)
+
+
+1
